@@ -12,14 +12,14 @@ namespace Jick
 	[CustomEditor(typeof(MaterialInstancedProperties))]
 	public class MaterialInstancedPropertiesEditor : Editor
 	{
-		private MaterialProperties _CastedTarget;
+		private MaterialInstancedProperties _CastedTarget;
 		private SerializedProperty _Properties;
 		private Material _Material;
 		private Shader _Shader;
 
 		private void OnEnable()
 		{
-			_CastedTarget = (MaterialProperties)target;
+			_CastedTarget = (MaterialInstancedProperties)target;
 			_Properties = serializedObject.FindProperty( "Properties" );
 
 			if ( _CastedTarget.GetComponent<MeshRenderer>() != null && _CastedTarget.GetComponent<MeshRenderer>().sharedMaterial != null )
