@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Jick
 {
-	[ExecuteInEditMode,RequireComponent(typeof(MeshRenderer)),AddComponentMenu("Jick/Material Properties"),DisallowMultipleComponent]
+	[ExecuteInEditMode,RequireComponent(typeof(MeshRenderer)),AddComponentMenu("Jick/Material Instanced Properties"),DisallowMultipleComponent]
 	public class MaterialInstancedProperties : MonoBehaviour
 	{
 		[SerializeField] public List<MaterialProperty> Properties = new List<MaterialProperty>();
